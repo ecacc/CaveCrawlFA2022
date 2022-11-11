@@ -9,6 +9,7 @@ TagManager:
   - GoldCoin
   - HandSanitizer
   - WaterBucket
+  - ground
   layers:
   - Default
   - TransparentFX
