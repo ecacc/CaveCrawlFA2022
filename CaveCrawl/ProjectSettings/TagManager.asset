@@ -10,6 +10,8 @@ TagManager:
   - HandSanitizer
   - WaterBucket
   - ground
+  - mushroom
+  - note
   layers:
   - Default
   - TransparentFX
