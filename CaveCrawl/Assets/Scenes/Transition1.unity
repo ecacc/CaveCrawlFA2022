@@ -2361,6 +2361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee42c1cc41c7f94780688354f4668c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1917877048}
   rb: {fileID: 1117884971}
   jumpForce: 8
   feet: {fileID: 885692489}
@@ -2386,6 +2387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 1117884971}
+  anim: {fileID: 1917877048}
   startSpeed: 6
   isAlive: 1
 --- !u!50 &1117884971
@@ -3785,7 +3787,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 1518757584, guid: 1ac866d2188f0114b8b60cc02d862f2c, type: 3}
+  m_Sprite: {fileID: -1547120370, guid: 2b1d9adc576731d409bd4fac8dfb9bfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

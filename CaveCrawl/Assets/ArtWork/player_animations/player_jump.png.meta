@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ac866d2188f0114b8b60cc02d862f2c
+guid: be88726fbbd2f1f41a702bfad18e8a61
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 105
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_walk_1
+      name: player_jump_0
       rect:
         serializedVersion: 2
-        x: 14964
-        y: 284
-        width: 792
-        height: 1591
+        x: 76
+        y: 29
+        width: 111
+        height: 194
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c00a4db7209a47a42bf6874c4f0ff4d3
-      internalID: 1518757584
+      spriteID: c01efdd327cb4ae459497f54b0faeef5
+      internalID: -345077716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_3
+      name: player_jump_1
       rect:
         serializedVersion: 2
-        x: 4716
-        y: 284
-        width: 800
-        height: 1560
+        x: 339
+        y: 34
+        width: 99
+        height: 188
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e821191180b2a1648b814340e15d10b8
-      internalID: -1328453864
+      spriteID: 12b7f183e6d3c574d8222ef47ccdcc1b
+      internalID: -669740891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_4
+      name: player_jump_2
       rect:
         serializedVersion: 2
-        x: 6772
-        y: 284
-        width: 792
-        height: 1560
+        x: 592
+        y: 36
+        width: 115
+        height: 172
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1c61348fa983cc4185381d20023c4de
-      internalID: 717149102
+      spriteID: 8c2791d4c74cf5c4bb1c0e7b824de5bc
+      internalID: -1219788197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_5
+      name: player_jump_3
       rect:
         serializedVersion: 2
-        x: 12908
-        y: 292
-        width: 800
-        height: 1536
+        x: 848
+        y: 34
+        width: 111
+        height: 171
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e5ba4d7e4616d649ad59bb5e5da206c
-      internalID: 1217603563
+      spriteID: 20d5e48cecf731741a8d3feb49473262
+      internalID: -1562913995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_7
+      name: player_jump_4
       rect:
         serializedVersion: 2
-        x: 580
-        y: 284
-        width: 872
-        height: 1536
+        x: 1118
+        y: 39
+        width: 93
+        height: 209
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ecf4dcb851ab8f42922b7310785b1d8
-      internalID: 1710806075
+      spriteID: 11fc1c41e47c2cc4a9bb72ee9fe10111
+      internalID: -959713936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_8
+      name: player_jump_6
       rect:
         serializedVersion: 2
-        x: 2660
-        y: 273
-        width: 880
-        height: 1507
+        x: 1356
+        y: 78
+        width: 140
+        height: 169
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47653221d00288640b9b5af142279534
-      internalID: 2022917125
+      spriteID: 3a3f738d4cdae0e468c657d8596774b4
+      internalID: 872347576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_9
+      name: player_jump_8
       rect:
         serializedVersion: 2
-        x: 8772
-        y: 277
-        width: 888
-        height: 1535
+        x: 1599
+        y: 87
+        width: 159
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bbd9a6b323432d4b9730d0be811b492
-      internalID: -813130313
+      spriteID: dea3ad83df0e87a469a15cddbf7545e6
+      internalID: 1902810417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_10
+      name: player_jump_10
       rect:
         serializedVersion: 2
-        x: 10852
-        y: 285
-        width: 792
-        height: 1495
+        x: 1868
+        y: 45
+        width: 118
+        height: 189
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +265,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07a94f90d2d088a4c9207567bc4a69a9
-      internalID: -426626326
+      spriteID: 3e545a515ef0c334991cfbffa74ff809
+      internalID: 1706124669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_jump_11
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 34
+        width: 111
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324c1e8cf1a3ea94e9d46af3dfdda1e7
+      internalID: -484104109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_jump_12
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 34
+        width: 100
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0068bae23274bed4a9dde949bb4614c7
+      internalID: 1689661442
       vertices: []
       indices: 
       edges: []
@@ -282,51 +324,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_walk_28: 1869009508
-      player_walk_8: 2022917125
-      player_walk_44: -464568799
-      player_walk_6: -1238272637
-      player_walk_36: -1665119108
-      player_walk_21: -79124044
-      player_walk_4: 717149102
-      player_walk_22: -665888852
-      player_walk_25: -2142016790
-      player_walk_39: 1881253479
-      player_walk_27: 1194911080
-      player_walk_19: 1619494081
-      player_walk_26: -1253509430
-      player_walk_18: 2125590287
-      player_walk_20: -1814330256
-      player_walk_24: 577980982
-      player_walk_32: 1923726433
-      player_walk_35: 869071209
-      player_walk_23: -1448181972
-      player_walk_14: -328856367
-      player_walk_11: -189631246
-      player_walk_13: -1872482609
-      player_walk_0: 820094148
-      player_walk_10: -426626326
-      player_walk_17: -1127565461
-      player_walk_33: -316941915
-      player_walk_9: -813130313
-      player_walk_42: 519416916
-      player_walk_37: -1775122243
-      player_walk_31: 1727023324
-      player_walk_15: 293893151
-      player_walk_7: 1710806075
-      player_walk_34: -1776966185
-      player_walk_5: 1217603563
-      player_walk_30: 271441133
-      player_walk_16: 219255904
-      player_walk_29: -263936892
-      player_walk_3: -1328453864
-      player_walk_40: -360342184
-      player_walk_2: 2081688430
-      player_walk_1: 1518757584
-      player_walk_43: -1707144746
-      player_walk_12: -1656283113
-      player_walk_41: 254935416
-      player_walk_38: 1649220345
+      player_jump_17: -1719909687
+      player_jump_16: -307553099
+      player_jump_4: -959713936
+      player_jump_6: 872347576
+      player_jump_9: -64552066
+      player_jump_13: 2000846818
+      player_jump_19: 1772115114
+      player_jump_15: -1608897981
+      player_jump_18: 1311210018
+      player_jump_12: 1689661442
+      player_jump_3: -1562913995
+      player_jump_10: 1706124669
+      player_jump_8: 1902810417
+      player_jump_14: 1972092183
+      player_jump_0: -345077716
+      player_jump_11: -484104109
+      player_jump_5: 1276023155
+      player_jump_1: -669740891
+      player_jump_7: -202034086
+      player_jump_2: -1219788197
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour {
 
-      //public Animator anim;
+      public Animator anim;
       public Rigidbody2D rb;
       public float jumpForce = 20f;
       public Transform feet;
@@ -16,7 +16,7 @@ public class PlayerJump : MonoBehaviour {
       //public AudioSource JumpSFX;
 
       void Start(){
-            //anim = gameObject.GetComponentInChildren<Animator>();
+            anim = gameObject.GetComponentInChildren<Animator>();
             rb = GetComponent<Rigidbody2D>();
       }
 
@@ -35,7 +35,7 @@ public class PlayerJump : MonoBehaviour {
       public void Jump() {
             jumpTimes += 1;
             rb.velocity = Vector2.up * jumpForce;
-            // anim.SetTrigger("Jump");
+            anim.SetTrigger("jump");
             // JumpSFX.Play();
 
             //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);

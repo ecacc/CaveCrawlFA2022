@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 2b1d9adc576731d409bd4fac8dfb9bfa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_idle_1
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 294
+        width: 788
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74bf73fe44e8044eb1ab7bb9af22290
+      internalID: -1547120370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_idle_3
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 294
+        width: 788
+        height: 1480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a461b395b3c471e41bb89db174fef61d
+      internalID: 147630531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_idle_5
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 294
+        width: 788
+        height: 1464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e884eab22c6dc4d810a3beb3466a70
+      internalID: 302362499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_idle_7
+      rect:
+        serializedVersion: 2
+        x: 6758
+        y: 294
+        width: 788
+        height: 1480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238be7b68ff9c5f48a5fd0535e3a6454
+      internalID: -329178849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Player_idle_30: 655042373
+      Player_idle_0: -268738674
+      Player_idle_19: -47248159
+      Player_idle_11: 988661659
+      Player_idle_59: -1068915258
+      Player_idle_3: 147630531
+      Player_idle_36: -1003207230
+      Player_idle_2: 1973713432
+      Player_idle_39: -1346052625
+      Player_idle_37: -843590449
+      Player_idle_35: 1122928805
+      Player_idle_16: 2121459811
+      Player_idle_31: -794209804
+      Player_idle_6: -1863953418
+      Player_idle_24: 1475972286
+      Player_idle_32: -1789658025
+      Player_idle_5: 302362499
+      Player_idle_1: -1547120370
+      Player_idle_53: 1828769618
+      Player_idle_9: 2017105643
+      Player_idle_51: -1888642906
+      Player_idle_41: 630044845
+      Player_idle_55: -743268702
+      Player_idle_49: -40302606
+      Player_idle_40: -838324433
+      Player_idle_26: 727870429
+      Player_idle_10: -1678271063
+      Player_idle_21: 1519501207
+      Player_idle_15: 732251895
+      Player_idle_42: -2107838979
+      Player_idle_45: 1526789720
+      Player_idle_54: -1329390822
+      Player_idle_50: -973548781
+      Player_idle_46: -1659965798
+      Player_idle_12: -73429720
+      Player_idle_27: 1471899817
+      Player_idle_17: -322039821
+      Player_idle_33: 1975652930
+      Player_idle_48: 1544841308
+      Player_idle_34: 678360098
+      Player_idle_20: -162735344
+      Player_idle_23: -1331550567
+      Player_idle_28: -56261796
+      Player_idle_29: 988462611
+      Player_idle_47: 339938452
+      Player_idle_58: -392124925
+      Player_idle_56: 765571132
+      Player_idle_44: 44238127
+      Player_idle_52: 1446348370
+      Player_idle_38: -358656183
+      Player_idle_13: -1275754058
+      Player_idle_14: -2119351517
+      Player_idle_7: -329178849
+      Player_idle_8: 1415177507
+      Player_idle_4: 576974294
+      Player_idle_43: -1472951734
+      Player_idle_25: 155610650
+      Player_idle_22: 229339896
+      Player_idle_57: 47167949
+      Player_idle_18: -1074487974
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

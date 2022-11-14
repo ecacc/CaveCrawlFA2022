@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-      //public Animator animator;
+      
       public Rigidbody2D rb2D;
+      public Animator anim;
       private bool FaceRight = false; // determine which way player is facing.
       public static float runSpeed = 8f;
       public float startSpeed = 4f;
@@ -14,7 +15,7 @@ public class PlayerMove : MonoBehaviour {
       private Vector3 hMove;
 
       void Start(){
-           //animator = gameObject.GetComponentInChildren<Animator>();
+           anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
       }
 
@@ -23,14 +24,13 @@ public class PlayerMove : MonoBehaviour {
            hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
            if (isAlive == true){
                   transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
-
                   if (Input.GetAxis("Horizontal") != 0){
-                  //       animator.SetBool ("Walk", true);
+                         anim.SetBool ("run", true);
                   //       if (!WalkSFX.isPlaying){
                   //             WalkSFX.Play();
                   //      }
                   } else {
-                  //      animator.SetBool ("Walk", false);
+                          anim.SetBool ("run", false);
                   //      WalkSFX.Stop();
                   }
 
@@ -39,7 +39,8 @@ public class PlayerMove : MonoBehaviour {
                         playerTurn();
                   }
            }
-      }
+           //anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+    }
 
       void FixedUpdate(){
             //slow down on hills / stops sliding from velocity
