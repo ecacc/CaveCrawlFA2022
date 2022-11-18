@@ -12,6 +12,9 @@ TagManager:
   - ground
   - mushroom
   - note
+  - lava
+  - wall
+  - ceiling
   layers:
   - Default
   - TransparentFX
