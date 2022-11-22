@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41955955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -1.95, z: 0}
+  m_LocalPosition: {x: 3.2, y: -1.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -656,13 +656,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   web: {fileID: 1791801362}
   newWeb: {fileID: 0}
-  launchForce: 17
+  launchForce: 14
   spawnPoint: {fileID: 41955956}
   playerHealth: 6
   playerHeart1: {fileID: 2053836688}
   playerHeart2: {fileID: 946605975}
   playerHeart3: {fileID: 110735127}
-  timeToSpawn: 25
+  timeToSpawn: 4
 --- !u!1 &487557455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   newArrow: {fileID: 0}
   launchForce: 11
   shotPoint: {fileID: 336353543}
-  timeToSpawn: 7
+  timeToSpawn: 2
 --- !u!4 &1088543409
 Transform:
   m_ObjectHideFlags: 0
