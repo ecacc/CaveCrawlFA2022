@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour {
       private bool FaceRight = false; // determine which way player is facing.
       public static float runSpeed = 8f;
       public float startSpeed = 4f;
-      public bool isAlive = true;
+      public static bool isAlive = true;
       //public AudioSource WalkSFX;
       private Vector3 hMove;
 
