@@ -7,10 +7,10 @@ public class PlayerMove : MonoBehaviour {
       
       public Rigidbody2D rb2D;
       public Animator anim;
-      private bool FaceRight = true; // determine which way player is facing.
+      private bool FaceRight = false; // determine which way player is facing.
       public static float runSpeed = 8f;
       public float startSpeed = 4f;
-      public bool isAlive = true;
+      public static bool isAlive = true;
       //public AudioSource WalkSFX;
       private Vector3 hMove;
 
@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour {
             // NOTE: Switch player facing label
             FaceRight = !FaceRight;
 
-            // NOTE: Multiply player's x local scale by -1.
+        // NOTE: Multiply player's x local scale by -1.
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;

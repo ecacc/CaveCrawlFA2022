@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class ObjectCollect : MonoBehaviour
 {
@@ -14,6 +17,8 @@ public class ObjectCollect : MonoBehaviour
      public GameObject note1;
      public GameObject inventory;
 
+     public static bool GameisPaused = false;
+
 
      void Start(){
       note1.SetActive(false);
@@ -22,15 +27,14 @@ public class ObjectCollect : MonoBehaviour
 
      void Update(){
       if(!note) {
-        light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .0001f;
+        if (light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity >= 0.01) {
+          light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .0001f;
+        }
       } else {
-        if(Input.GetKeyDown(KeyCode.E)) {
-          note = false;
-          note1.SetActive(false);
-          inventory.SetActive(true);
+        if(Input.GetKeyDown(KeyCode.Return)) {
+          Resume();
         } else {
-          note1.SetActive(true);
-          inventory.SetActive(false);
+          Pause();
         }
       }
      }
@@ -53,4 +57,23 @@ public class ObjectCollect : MonoBehaviour
             note = true;
           }
      }
+
+
+     void Pause(){
+      note1.SetActive(true);
+      inventory.SetActive(false);
+      PlayerMove.isAlive = false;
+      GameisPaused = true;
+     }
+
+     public void Resume(){
+      note1.SetActive(false);
+      inventory.SetActive(true);
+      note = false;
+      PlayerMove.isAlive = true;
+      GameisPaused = false;
+     }
+
+
+
 }

@@ -23,7 +23,7 @@ public class PlayerJump : MonoBehaviour {
      void Update() {
             if ((IsGrounded()) || (jumpTimes == 0)){
                   canJump = true;
-            }  else if (jumpTimes >= 1){
+            }  else if (jumpTimes == 1){
                   canJump = false;
             }
 
