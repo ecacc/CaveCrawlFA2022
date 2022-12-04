@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Bow : MonoBehaviour
 {
     public GameObject arrow;
     public GameObject newArrow = null;
-    public float launchForce;
+    public float maxLaunchForce;
     public Transform shotPoint;
-
+    public GameObject ShotStrengthMeter;
+    public GameObject gauge;
+    private Vector3 gauge_start;
     Rigidbody2D arrowRB;
 
     //Timing variables
@@ -16,12 +20,14 @@ public class Bow : MonoBehaviour
     public float timeToSpawn;
     private float spawnTimer = 0f;
     public static bool hit = false;
+    private bool hasArrow;
 
     // Start is called before the first frame update
     void Start()
     {
+        gauge_start = gauge.transform.position;
         SpawnArrow();
-        spawn = false;
+        
     }
 
     // Update is called once per frame
@@ -32,36 +38,47 @@ public class Bow : MonoBehaviour
         Vector2 direction = mousePosition - bowPosition;
         transform.right = direction;
 
-        if(!spawn) {
+        if(hasArrow) {
             Vector2 arrowPosition = newArrow.transform.position;
             Vector2 direction2 = mousePosition - arrowPosition;
             newArrow.transform.right = direction2;
         }
 
-        if(!spawn & Input.GetMouseButtonDown(0)) {
-                spawn = true;
+        if(hasArrow && Input.GetMouseButtonDown(0)) {
+                hasArrow = false;
+                Debug.Log("Before pause call");
+                ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthPause();
                 Shoot();
-            } else if (spawn == true) {
+        } else if (!hasArrow) {
                 if (spawnTimer >= timeToSpawn) {
+                    Debug.Log("Before unpause call: " + spawnTimer);
+                    ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthPause();
+                    ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthInit();
                     SpawnArrow();
-                    spawn = false;
+                    hasArrow = true;
                     spawnTimer = 0f;
                 } else {
                     spawnTimer += 0.01f;
                 }
-
-            }
+        }
     }
 
     void SpawnArrow()
     {
+        hasArrow = true;
         newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
         arrowRB = newArrow.GetComponent<Rigidbody2D>();
         arrowRB.constraints = RigidbodyConstraints2D.FreezePosition;
+        newArrow.SetActive(false);
+
     }
 
     void Shoot()
     {
+        hasArrow = false;
+        Vector3 gauge_curr = gauge.transform.position;
+        float launchForce = ((gauge_curr.y - gauge_start.y) / 4) * maxLaunchForce;
+        newArrow.SetActive(true);
         arrowRB.constraints = RigidbodyConstraints2D.None;
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
     }

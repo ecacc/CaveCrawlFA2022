@@ -6,13 +6,14 @@ public class ShotStrength : MonoBehaviour
 {
     public GameObject gauge;
     public GameObject meter;
+    public Animator anim;
 
     private Vector3 start;
     private Vector3 end;
-    private float distance = 0f;
     private bool up;
-    private int elapsed_frames = 0;
+    private int elapsed_frames;
     public int interpolation_frames = 300;
+    private bool pause = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,38 +21,56 @@ public class ShotStrength : MonoBehaviour
         start = gauge.transform.position;
         end = new Vector3(0, 4, 0);
         end = end + start;
+        ShotStrengthInit();
+    }
+    public void ShotStrengthInit()
+    {
+        elapsed_frames = 0;
+        gauge.transform.position = start;
+        anim.SetBool("drawBack", true);
+    }
+
+    public void ShotStrengthPause()
+    {
+        pause = !pause;
+        anim.SetBool("shot", pause);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (up)
+        if (!pause)
         {
-            float interpolationRatio = (float)elapsed_frames / interpolation_frames;
-
-            Vector3 interpolatedPosition = Vector3.Lerp(start, end, interpolationRatio);
-
-            elapsed_frames = (elapsed_frames + 1) % (interpolation_frames + 1);
-            gauge.transform.position = interpolatedPosition;
-            if (elapsed_frames == 0)
+            if (up)
             {
-                up = false;
+                float interpolationRatio = (float)elapsed_frames / interpolation_frames;
+
+                Vector3 interpolatedPosition = Vector3.Lerp(start, end, interpolationRatio);
+
+                elapsed_frames = (elapsed_frames + 1) % (interpolation_frames + 1);
+                gauge.transform.position = interpolatedPosition;
+                if (elapsed_frames == 0)
+                {
+                    up = false;
+                    anim.SetBool("drawBack", false);
+                }
+
             }
-
-        }
-        else
-        {
-            float interpolationRatio = (float)elapsed_frames / interpolation_frames;
-
-            Vector3 interpolatedPosition = Vector3.Lerp(end, start, interpolationRatio);
-
-            elapsed_frames = (elapsed_frames + 1) % (interpolation_frames + 1);
-            gauge.transform.position = interpolatedPosition;
-            if (elapsed_frames == 0)
+            else
             {
-                up = true;
-            }
+                float interpolationRatio = (float)elapsed_frames / interpolation_frames;
 
+                Vector3 interpolatedPosition = Vector3.Lerp(end, start, interpolationRatio);
+
+                elapsed_frames = (elapsed_frames + 1) % (interpolation_frames + 1);
+                gauge.transform.position = interpolatedPosition;
+                if (elapsed_frames == 0)
+                {
+                    up = true;
+                    anim.SetBool("drawBack", true);
+                }
+
+            }
         }
     }
 }
