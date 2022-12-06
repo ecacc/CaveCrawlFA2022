@@ -9,6 +9,10 @@ public class PauseMenu : MonoBehaviour  {
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
+        public GameObject deathMenuUI;
+        public GameObject winMenuUI;
+    public GameObject P_last_heart;
+    public GameObject S_last_heart;
         //public AudioMixer mixer;
         //public static float volumeLevel = 1.0f;
         //private Slider sliderVolumeCtrl;
@@ -24,6 +28,7 @@ public class PauseMenu : MonoBehaviour  {
 
         void Start (){
                 pauseMenuUI.SetActive(false);
+                deathMenuUI.SetActive(false);
         }
 
         void Update (){
@@ -35,9 +40,28 @@ public class PauseMenu : MonoBehaviour  {
                                 Pause();
                         }
                 }
+                if (P_last_heart.activeSelf == false)
+                {
+                    Die();
+                }
+                if (S_last_heart.activeSelf == false)
+                {
+                    Win();
+                }
         }
 
-        void Pause(){
+        void Die()
+        {
+            deathMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        void Win()
+        {
+            winMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
+
+    void Pause(){
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
                 GameisPaused = true;
