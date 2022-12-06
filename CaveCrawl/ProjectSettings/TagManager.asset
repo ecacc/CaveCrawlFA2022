@@ -17,6 +17,9 @@ TagManager:
   - ceiling
   - arrow
   - web
+  - Door
+  - Key
+  - nomushroom
   layers:
   - Default
   - TransparentFX
