@@ -28,8 +28,6 @@ public class ObjectCollect : MonoBehaviour
 
      public double timer = 0;
 
-     public int numKeys = 0;
-
      public static bool GameisPaused = false;
 
 
@@ -70,22 +68,16 @@ public class ObjectCollect : MonoBehaviour
           if (other.gameObject.tag == "Key") {
             string name = other.gameObject.name;
             if (name == "GoldKey") {
-              numKeys += 1;
               GoldKey.SetActive(true);
             } else if (name == "GreenKey") {
-              numKeys += 1;
               GreenKey.SetActive(true);
             } else if (name == "BlueKey") {
-              numKeys += 1;
               BlueKey.SetActive(true);
             } else if (name == "RedKey") {
-              numKeys += 1;
               RedKey.SetActive(true);
             } else if (name == "PurpleKey") {
-              numKeys += 1;
               PurpleKey.SetActive(true);
             } else {
-              numKeys += 1;
               SkullKey.SetActive(true);
             }
           } else if (other.gameObject.tag == "mushroom") {
@@ -103,7 +95,7 @@ public class ObjectCollect : MonoBehaviour
             }
           }
           if (other.gameObject.tag == "Door") {
-            if(numKeys == 6) {
+            if(hasAllKeys()) {
               Destroy(other.gameObject);
               DoorOpen.SetActive(true);
             } else {
@@ -113,6 +105,33 @@ public class ObjectCollect : MonoBehaviour
           }
      }
 
+    bool hasAllKeys()
+    {
+        if (GoldKey.activeSelf == false)
+        {
+            return false;
+        }else if (GreenKey.activeSelf == false)
+        {
+            return false;
+        }
+        else if (BlueKey.activeSelf == false)
+        {
+            return false;
+        }
+        else if (RedKey.activeSelf == false)
+        {
+            return false;
+        }
+        else if (PurpleKey.activeSelf == false)
+        {
+            return false;
+        }
+        else if (SkullKey.activeSelf == false)
+        {
+            return false;
+        }
+        return true;
+    }
 
      void Pause(){
       note.SetActive(true);
