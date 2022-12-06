@@ -44,7 +44,7 @@ public class ObjectCollect : MonoBehaviour
      void Update(){
       if(!noteShow) {
         if (light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity >= 0.01) {
-          light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .0002f;
+          light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .0001f;
         }
       } else {
         if(Input.GetKeyDown(KeyCode.Return)) {

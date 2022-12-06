@@ -20,6 +20,7 @@ TagManager:
   - Door
   - Key
   - nomushroom
+  - Lava
   layers:
   - Default
   - TransparentFX
