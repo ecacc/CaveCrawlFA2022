@@ -44,11 +44,13 @@ public class Bow : MonoBehaviour
             newArrow.transform.right = direction2;
         }
 
-        if(hasArrow && Input.GetMouseButtonDown(0)) {
+        if(hasArrow) {
+            if (Input.GetMouseButtonDown(0)) {
                 hasArrow = false;
                 Debug.Log("Before pause call");
                 ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthPause();
                 Shoot();
+            } 
         } else if (!hasArrow) {
                 if (spawnTimer >= timeToSpawn) {
                     Debug.Log("Before unpause call: " + spawnTimer);
@@ -58,7 +60,7 @@ public class Bow : MonoBehaviour
                     hasArrow = true;
                     spawnTimer = 0f;
                 } else {
-                    spawnTimer += 0.01f;
+                    spawnTimer += .01f;
                 }
         }
     }

@@ -23,7 +23,7 @@ public class PlayerJump : MonoBehaviour {
      void Update() {
             if ((IsGrounded()) || (jumpTimes == 0)){
                   canJump = true;
-            }  else if (jumpTimes == 1){
+            }  else if (jumpTimes == 2){
                   canJump = false;
             }
 
@@ -43,8 +43,8 @@ public class PlayerJump : MonoBehaviour {
       }
 
       public bool IsGrounded() {
-            Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, .5f, groundLayer);
-            Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, .5f, enemyLayer);
+            Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, .1f, groundLayer);
+            Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, .1f, enemyLayer);
             if ((groundCheck != null) || (enemyCheck != null)) {
                   //Debug.Log("I am trouching ground!");
                   jumpTimes = 0;

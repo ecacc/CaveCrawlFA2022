@@ -16,7 +16,7 @@ public class ArrowHit : MonoBehaviour
         spiderHeart3.SetActive(true);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(spiderHealth == 2) {
             spiderHeart3.SetActive(false);

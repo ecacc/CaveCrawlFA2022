@@ -13,7 +13,7 @@ public class Arrow : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
       }
 
-      void Update ()
+      void FixedUpdate ()
       {
         if(Bow.spawn) {
           trackMovement();

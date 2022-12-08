@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpiderFight.unity
     guid: 66bd20c362cb6924ea18b29278d376bc
+  - enabled: 1
+    path: Assets/Scenes/DeathPage.unity
+    guid: adb8d8e248cea0f4b96c673a02021dcf
   m_configObjects: {}

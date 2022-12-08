@@ -9,15 +9,12 @@ public class PauseMenu : MonoBehaviour  {
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
-        public GameObject deathMenuUI;
-        public GameObject winMenuUI;
-    public GameObject P_last_heart;
-    public GameObject S_last_heart;
+        public GameObject resumeUI;
         //public AudioMixer mixer;
         //public static float volumeLevel = 1.0f;
         //private Slider sliderVolumeCtrl;
 
-        void Awake (){
+        void Awake () {
                 //SetLevel (volumeLevel);
                 //GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
                 // if (sliderTemp != null){
@@ -26,58 +23,40 @@ public class PauseMenu : MonoBehaviour  {
                 // }
         }
 
-        void Start (){
-                pauseMenuUI.SetActive(false);
-                deathMenuUI.SetActive(false);
+        void Start () {
+             pauseMenuUI.SetActive(false);
+             resumeUI.SetActive(false);
+             
         }
 
-        void Update (){
+        void Update () {
                 if (Input.GetKeyDown(KeyCode.Escape)){
-                        if (GameisPaused){
+                        if (GameisPaused) {
                                 Resume();
                         }
-                        else{
+                        else {
                                 Pause();
                         }
                 }
-                if (P_last_heart.activeSelf == false)
-                {
-                    Die();
-                }
-                if (S_last_heart.activeSelf == false)
-                {
-                    Win();
-                }
         }
 
-        void Die()
-        {
-            deathMenuUI.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        void Win()
-        {
-            winMenuUI.SetActive(true);
-            Time.timeScale = 0f;
-        }
-
-    void Pause(){
+        void Pause() {
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
+                Debug.Log(Time.timeScale);
                 GameisPaused = true;
         }
 
         public void Resume(){
                 pauseMenuUI.SetActive(false);
+                resumeUI.SetActive(false);
                 Time.timeScale = 1f;
                 GameisPaused = false;
         }
 
         public void Restart(){
                 Time.timeScale = 1f;
-                //restart the game:
                 SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
-                //SceneManager.LoadScene ("StartPage");
         }
 
       public void QuitGame() {

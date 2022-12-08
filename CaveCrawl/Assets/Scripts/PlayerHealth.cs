@@ -12,19 +12,19 @@ public class PlayerHealth : MonoBehaviour
     public GameObject halfheart3;
     public GameObject light;
 
-    public float health = 1f;
+    public static float health = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = 1f;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity <= 0.01) {
-            health -= .0001f;
+            health -= .001f;
         }
         if (.7f <= health && health <= .85f) {
             heart2.SetActive(false);

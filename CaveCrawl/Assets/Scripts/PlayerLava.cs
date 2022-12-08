@@ -20,10 +20,11 @@ public class PlayerLava : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(startBlinking == true) {
             SpriteBlinkingEffect();
+            PlayerHealth.health -= .005f;
         }
         
     }
@@ -31,9 +32,9 @@ public class PlayerLava : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Lava") {
             startBlinking = true;
-            if (light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity >= 0.01) {
-               light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .1f;
-            }
+            // if (light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity >= 0.01) {
+            //    light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .1f;
+            // }
         }
     }
 
