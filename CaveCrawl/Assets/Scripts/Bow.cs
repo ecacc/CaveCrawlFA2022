@@ -45,7 +45,7 @@ public class Bow : MonoBehaviour
         }
 
         if(hasArrow) {
-            if (Input.GetMouseButtonDown(0)) {
+            if (Input.GetMouseButtonDown(0) && !PauseMenu.GameisPaused) {
                 hasArrow = false;
                 Debug.Log("Before pause call");
                 ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthPause();
