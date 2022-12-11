@@ -32,6 +32,7 @@ public class ShotStrength : MonoBehaviour
 
     public void ShotStrengthPause()
     {
+        Debug.Log("bow was shot");
         pause = !pause;
         anim.SetBool("shot", pause);
     }

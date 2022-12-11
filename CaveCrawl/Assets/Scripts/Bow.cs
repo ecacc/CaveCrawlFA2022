@@ -38,17 +38,20 @@ public class Bow : MonoBehaviour
         Vector2 direction = mousePosition - bowPosition;
         transform.right = direction;
 
-        if(hasArrow) {
-            Vector2 arrowPosition = newArrow.transform.position;
-            Vector2 direction2 = mousePosition - arrowPosition;
-            newArrow.transform.right = direction2;
-        }
+        //if(hasArrow) {
+        //    Vector2 arrowPosition = newArrow.transform.position;
+        //    Vector2 direction2 = mousePosition - arrowPosition;
+        //    newArrow.transform.right = direction2;
+        //}
 
         if(hasArrow) {
             if (Input.GetMouseButtonDown(0) && !PauseMenu.GameisPaused) {
                 hasArrow = false;
-                Debug.Log("Before pause call");
                 ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthPause();
+                SpawnArrow();
+                Vector2 arrowPosition = newArrow.transform.position;
+                Vector2 direction2 = mousePosition - arrowPosition;
+                newArrow.transform.right = direction2;
                 Shoot();
             } 
         } else if (!hasArrow) {
@@ -56,7 +59,7 @@ public class Bow : MonoBehaviour
                     Debug.Log("Before unpause call: " + spawnTimer);
                     ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthPause();
                     ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthInit();
-                    SpawnArrow();
+                    //SpawnArrow();
                     hasArrow = true;
                     spawnTimer = 0f;
                 } else {
