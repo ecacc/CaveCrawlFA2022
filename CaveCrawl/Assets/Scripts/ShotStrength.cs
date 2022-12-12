@@ -18,7 +18,7 @@ public class ShotStrength : MonoBehaviour
     void Start()
     {
         up = true;
-        start = gauge.transform.position;
+        start = meter.transform.position - new Vector3(0, 2, 1);
         end = new Vector3(0, 4, 0);
         end = end + start;
         ShotStrengthInit();
@@ -40,6 +40,8 @@ public class ShotStrength : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        start = meter.transform.position - new Vector3(0, 2, 1);
+        end = new Vector3(0, 4, 0) + start;
         if (!pause)
         {
             if (up)

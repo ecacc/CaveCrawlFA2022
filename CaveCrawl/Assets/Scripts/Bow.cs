@@ -12,6 +12,7 @@ public class Bow : MonoBehaviour
     public Transform shotPoint;
     public GameObject ShotStrengthMeter;
     public GameObject gauge;
+    public GameObject meter;
     private Vector3 gauge_start;
     Rigidbody2D arrowRB;
 
@@ -81,7 +82,8 @@ public class Bow : MonoBehaviour
     void Shoot()
     {
         hasArrow = false;
-        Vector3 gauge_curr = gauge.transform.position;
+        Vector2 gauge_curr = gauge.transform.position;
+        Vector2 gauge_start = (Vector2)meter.transform.position - new Vector2(0, 2);
         float launchForce = ((gauge_curr.y - gauge_start.y) / 4) * maxLaunchForce;
         newArrow.SetActive(true);
         arrowRB.constraints = RigidbodyConstraints2D.None;

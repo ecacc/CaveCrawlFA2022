@@ -26,4 +26,15 @@ public class Arrow : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle,Vector3.forward);
       }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "web")
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag != "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
