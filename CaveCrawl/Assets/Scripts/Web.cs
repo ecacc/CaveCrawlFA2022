@@ -48,7 +48,16 @@ public class Web : MonoBehaviour
     void Shoot()
     {
         newWeb = Instantiate(web, spawnPoint.position, spawnPoint.rotation);
-        newWeb.GetComponent<Rigidbody2D>().velocity = -newWeb.gameObject.transform.right * launchForce;
+        //newWeb.GetComponent<Rigidbody2D>().velocity = -newWeb.gameObject.transform.right * launchForce;
+        Vector3 x = -newWeb.gameObject.transform.right * launchForce;
+        float randy = (float)Random.Range(0, 3);
+        if (randy != 2)
+        {
+            randy = randy+ 0.25f;
+        }
+        Vector3 y = new Vector3(0, randy * 0.5f * launchForce, 0);
+        newWeb.GetComponent<Rigidbody2D>().velocity = x + y;
+        Debug.Log(randy);
     }
 
 

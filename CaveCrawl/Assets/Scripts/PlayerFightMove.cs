@@ -6,6 +6,7 @@ public class PlayerFightMove : MonoBehaviour
 {
     public static float runSpeed = 8f;
     private Vector3 hMove;
+    public GameObject CameraBossFight;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,4 +19,14 @@ public class PlayerFightMove : MonoBehaviour
         hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
         transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "BossFightTrigger")
+        {
+            CameraBossFight.GetComponent<CameraBossFight>().FightCam();
+        }
+    }
+
+    
 }
