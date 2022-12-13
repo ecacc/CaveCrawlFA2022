@@ -15,6 +15,8 @@ public class DeathMenu : MonoBehaviour
             SceneManager.LoadSceneAsync("SpiderFight");
         } else if (DeathScreen.currlevel == 1) {
             SceneManager.LoadSceneAsync("SampleScene");
+        } else if (DeathScreen.currlevel == 0) {
+            SceneManager.LoadSceneAsync("Level1");
         } else {
             SceneManager.LoadSceneAsync("StartPage");
         }
