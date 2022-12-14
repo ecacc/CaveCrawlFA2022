@@ -36259,6 +36259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae22a99821b4c4e8131bcc0fc0e3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoorOpen: {fileID: 53993055}
 --- !u!1 &1468212177
 GameObject:
   m_ObjectHideFlags: 0
@@ -40138,7 +40139,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -40269,14 +40270,14 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 958349392, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 948622405, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 958349392, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -1636970101, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
   - m_RefCount: 4
