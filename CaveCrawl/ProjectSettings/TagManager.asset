@@ -23,6 +23,7 @@ TagManager:
   - Lava
   - BossFightTrigger
   - spider
+  - trailmix
   layers:
   - Default
   - TransparentFX

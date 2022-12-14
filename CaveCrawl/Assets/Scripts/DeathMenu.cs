@@ -11,12 +11,14 @@ public class DeathMenu : MonoBehaviour
     }
 
     public void Restart() {
-        if (DeathScreen.currlevel == 2) {
-            SceneManager.LoadSceneAsync("SpiderFight");
-        } else if (DeathScreen.currlevel == 1) {
+        if (DeathScreen.currlevel == 1) {
+           SceneManager.LoadSceneAsync("Level1"); 
+        } else if (DeathScreen.currlevel == 2) {
+            SceneManager.LoadSceneAsync("Level2"); 
+        } else if (DeathScreen.currlevel == 5) {
             SceneManager.LoadSceneAsync("SampleScene");
-        } else if (DeathScreen.currlevel == 0) {
-            SceneManager.LoadSceneAsync("Level1");
+        } else if (DeathScreen.currlevel == 6) {
+           SceneManager.LoadSceneAsync("SpiderFight"); 
         } else {
             SceneManager.LoadSceneAsync("StartPage");
         }

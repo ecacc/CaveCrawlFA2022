@@ -12060,7 +12060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   P_last_heart: {fileID: 2053836688}
-  level: 2
+  level: 6
 --- !u!1 &1775357431
 GameObject:
   m_ObjectHideFlags: 0
