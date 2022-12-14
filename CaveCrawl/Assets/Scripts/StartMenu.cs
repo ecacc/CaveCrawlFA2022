@@ -19,7 +19,7 @@ public class StartMenu : MonoBehaviour
     {
         mouse.transform.position = Input.mousePosition + new Vector3(0f, 0f, 1f);
         if(play && Input.GetMouseButtonDown(0)) {
-            SceneManager.LoadSceneAsync("SampleScene");
+            SceneManager.LoadSceneAsync("Level1");
         }
     }
 
