@@ -24,6 +24,7 @@ TagManager:
   - BossFightTrigger
   - spider
   - trailmix
+  - GrapplingHook
   layers:
   - Default
   - TransparentFX

@@ -14,8 +14,10 @@ public class SceneChange : MonoBehaviour
             } else if (DeathScreen.currlevel == 2) {
                  SceneManager.LoadSceneAsync("Level3"); 
             } else if (DeathScreen.currlevel == 3) {
+                 SceneManager.LoadSceneAsync("Level4"); 
+            } else if (DeathScreen.currlevel == 4) {
                  SceneManager.LoadSceneAsync("SampleScene"); 
-            }else {
+            } else {
                  SceneManager.LoadSceneAsync("SpiderFight");
             }
           }
