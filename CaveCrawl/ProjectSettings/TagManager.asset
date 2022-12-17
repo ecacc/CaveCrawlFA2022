@@ -25,6 +25,7 @@ TagManager:
   - spider
   - trailmix
   - GrapplingHook
+  - bow
   layers:
   - Default
   - TransparentFX

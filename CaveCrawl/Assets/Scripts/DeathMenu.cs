@@ -23,8 +23,10 @@ public class DeathMenu : MonoBehaviour
         } else if (DeathScreen.currlevel == 5) {
             SceneManager.LoadSceneAsync("Level5");
         } else if (DeathScreen.currlevel == 6) {
-           SceneManager.LoadSceneAsync("SpiderFight"); 
+           SceneManager.LoadSceneAsync("SpiderIntro"); 
         } else if (DeathScreen.currlevel == 7) {
+           SceneManager.LoadSceneAsync("SpiderFight"); 
+        } else if (DeathScreen.currlevel == 8) {
            SceneManager.LoadSceneAsync("SampleScene"); 
         } else {
             SceneManager.LoadSceneAsync("StartPage");
