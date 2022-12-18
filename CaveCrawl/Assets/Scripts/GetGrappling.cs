@@ -21,12 +21,12 @@ public class GetGrappling : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
       if (gMessage) {
         if (NoteOpen.noteShow) {
             timer = 1.5;
         } else {
-            timer += .001;
+            timer += .005;
         }
         if(timer > 1) {
           GrapplingMessage.SetActive(false);

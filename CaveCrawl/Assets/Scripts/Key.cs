@@ -20,9 +20,9 @@ public class Key : MonoBehaviour
       KeyMessage.SetActive(false);
      }
 
-     void Update(){
+     void FixedUpdate(){
       if (kMessage) {
-        timer += .001;
+        timer += .005;
         if(timer > 1) {
           KeyMessage.SetActive(false);
           kMessage = false;
