@@ -1442,6 +1442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1355621809}
   video: {fileID: 1355621807}
+  videoName: CaveCrawlIntro.mp4
 --- !u!1 &1355621807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1488,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355621807}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: cd14caf2fe043c947bd935325b50b319, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 462ebf3e499e03440bf1b5a304f4b42d, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1273642249}
