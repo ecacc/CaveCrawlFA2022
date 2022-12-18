@@ -13,9 +13,9 @@ public class TrailMix : MonoBehaviour
       TrailMessage.SetActive(false);
     }
 
-    void Update(){
+    void FixedUpdate(){
       if (tMessage) {
-        timer += .001;
+        timer += .005;
         if(timer > 1) {
           TrailMessage.SetActive(false);
           tMessage = false;

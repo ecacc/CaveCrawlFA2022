@@ -9,13 +9,19 @@ public class Video : MonoBehaviour
     public VideoPlayer videoPlayer;
     public GameObject video;
     private bool playVid;
+    public string videoName;
+
+    void Start()
+    {
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, videoName);
+    }
 
     // Update is called once per frame
     void Update()
     {
         if((videoPlayer.frame > 0) && (videoPlayer.isPlaying == false) && playVid) {
             video.SetActive(false);
-            SceneManager.LoadSceneAsync("Level1");
+            Skip();
         }
         if(PauseMenu.GameisPaused) {
             playVid = false;
@@ -27,6 +33,10 @@ public class Video : MonoBehaviour
     }
 
     public void Skip() {
-        SceneManager.LoadSceneAsync("Level1");
+        if(videoName == "CaveCrawlIntro.mp") {
+            SceneManager.LoadSceneAsync("Level1");
+        } else {
+            SceneManager.LoadSceneAsync("StartPage");
+        }
     }
 }
