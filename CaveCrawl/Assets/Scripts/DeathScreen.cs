@@ -12,6 +12,7 @@ public class DeathScreen : MonoBehaviour  {
     public int level;
 
     void Start () {
+        currlevel = level;
         P_last_heart.SetActive(true);
     }
 

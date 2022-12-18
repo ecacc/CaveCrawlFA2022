@@ -21,6 +21,12 @@ TagManager:
   - Key
   - nomushroom
   - Lava
+  - BossFightTrigger
+  - spider
+  - trailmix
+  - GrapplingHook
+  - bow
+  - smallspider
   layers:
   - Default
   - TransparentFX

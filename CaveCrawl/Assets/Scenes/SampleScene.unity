@@ -6443,7 +6443,7 @@ GameObject:
   - component: {fileID: 424536033}
   - component: {fileID: 424536032}
   m_Layer: 5
-  m_Name: halfheart3
+  m_Name: halfheart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8286,7 +8286,7 @@ GameObject:
   - component: {fileID: 798701429}
   - component: {fileID: 798701428}
   m_Layer: 5
-  m_Name: heart2
+  m_Name: heart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9448,7 +9448,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -36259,6 +36259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae22a99821b4c4e8131bcc0fc0e3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoorOpen: {fileID: 53993055}
 --- !u!1 &1468212177
 GameObject:
   m_ObjectHideFlags: 0
@@ -36492,7 +36493,7 @@ GameObject:
   - component: {fileID: 1503547524}
   - component: {fileID: 1503547523}
   m_Layer: 5
-  m_Name: heart3
+  m_Name: heart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37110,7 +37111,7 @@ GameObject:
   - component: {fileID: 1596244127}
   - component: {fileID: 1596244126}
   m_Layer: 5
-  m_Name: halfheart1
+  m_Name: halfheart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37523,7 +37524,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: -1}
+  m_Offset: {x: -0.3, y: -1.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -37534,7 +37535,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.7, y: 0.9}
   m_EdgeRadius: 0
 --- !u!4 &1635596401
 Transform:
@@ -37568,11 +37569,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heart1: {fileID: 995148483}
-  heart2: {fileID: 798701426}
-  heart3: {fileID: 1503547521}
-  halfheart1: {fileID: 1596244124}
+  heart2: {fileID: 1503547521}
+  heart3: {fileID: 798701426}
+  halfheart1: {fileID: 424536031}
   halfheart2: {fileID: 1062143771}
-  halfheart3: {fileID: 424536031}
+  halfheart3: {fileID: 1596244124}
   light: {fileID: 1032716394}
 --- !u!1 &1642469867
 GameObject:
@@ -38035,6 +38036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711699764}
   - component: {fileID: 1711699765}
+  - component: {fileID: 1711699766}
   m_Layer: 5
   m_Name: PauseMenuSlider
   m_TagString: Untagged
@@ -38115,7 +38117,32 @@ MonoBehaviour:
   m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1711699766}
+        m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1711699766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711699763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d43fef66520e574f9e90d66e939a02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mix: {fileID: 24100000, guid: 42780b9b8a6a46548acb78c306e086ea, type: 2}
 --- !u!1 &1740215771
 GameObject:
   m_ObjectHideFlags: 0
@@ -38715,7 +38742,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -39390,7 +39417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   P_last_heart: {fileID: 424536031}
-  level: 1
+  level: 8
 --- !u!1 &1945815694
 GameObject:
   m_ObjectHideFlags: 0
@@ -40138,7 +40165,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -40269,14 +40296,14 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 958349392, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 948622405, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 958349392, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -1636970101, guid: 22eb4614a635a9f449a448490d72ac67, type: 3}
   - m_RefCount: 4

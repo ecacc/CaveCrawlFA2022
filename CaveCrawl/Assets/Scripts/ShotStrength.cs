@@ -27,12 +27,12 @@ public class ShotStrength : MonoBehaviour
     {
         elapsed_frames = 0;
         gauge.transform.position = start;
+        up = true;
         anim.SetBool("drawBack", true);
     }
 
     public void ShotStrengthPause()
     {
-        Debug.Log("bow was shot");
         pause = !pause;
         anim.SetBool("shot", pause);
     }
