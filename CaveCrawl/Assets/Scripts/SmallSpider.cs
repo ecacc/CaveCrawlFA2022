@@ -28,7 +28,7 @@ public class SmallSpider : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "ground") {
+        if(other.gameObject.tag == "ground" || other.gameObject.tag == "Player") {
             Debug.Log("hello");
             down = !down;
         }
