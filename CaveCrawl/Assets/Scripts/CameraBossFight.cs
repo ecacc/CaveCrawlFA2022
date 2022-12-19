@@ -24,12 +24,12 @@ public class CameraBossFight : MonoBehaviour
         }
         else
         {
-            Vector2 pos = Vector2.Lerp((Vector2)transform.position, new Vector2(0, 0), camSpeed * Time.fixedDeltaTime);
+            Vector2 pos = Vector2.Lerp((Vector2)transform.position, new Vector2(0, 3), camSpeed * Time.fixedDeltaTime);
             transform.position = new Vector3(pos.x, pos.y, transform.position.z);
-            fightCam.orthographicSize = fightCam.orthographicSize + 1 * Time.deltaTime;
-            if (fightCam.orthographicSize > 11)
+            fightCam.orthographicSize = fightCam.orthographicSize + 2 * Time.deltaTime;
+            if (fightCam.orthographicSize > 15)
             {
-                fightCam.orthographicSize = 11; // Max size
+                fightCam.orthographicSize = 15; // Max size
             }
         }
         

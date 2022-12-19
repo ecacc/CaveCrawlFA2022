@@ -30,7 +30,8 @@ public class PlayerLava : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Lava") {
+        if(other.gameObject.tag == "Lava" || other.gameObject.tag == "web") {
+            Debug.Log("Blinking?");
             startBlinking = true;
             // if (light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity >= 0.01) {
             //    light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .1f;

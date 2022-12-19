@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerFightMove : MonoBehaviour
 {
-    public static float runSpeed = 8f;
+    public float runSpeed = 8f;
     private Vector3 hMove;
     public GameObject CameraBossFight;
     // Start is called before the first frame update
