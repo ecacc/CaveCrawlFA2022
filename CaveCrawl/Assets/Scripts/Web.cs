@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 
 public class Web : MonoBehaviour
@@ -13,10 +14,12 @@ public class Web : MonoBehaviour
     public GameObject playerHeart1;
     public GameObject playerHeart2;
     public GameObject playerHeart3;
+    public GameObject spiderheart3;
 
     //Timing variables
     public float timeToSpawn;
     private float spawnTimer = 0f;
+    private bool active;
 
     // Start is called before the first frame update
     void Start()
@@ -24,24 +27,32 @@ public class Web : MonoBehaviour
         playerHeart1.SetActive(true);
         playerHeart2.SetActive(true);
         playerHeart3.SetActive(true);
+        active = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     { 
-        if (spawnTimer >= timeToSpawn) {
-            Shoot();
-            spawnTimer = 0f;
-        } else {
-            spawnTimer += 0.01f;
-        }
+        if (active)
+        { 
+            if (spawnTimer >= timeToSpawn) {
+                Shoot();
+                spawnTimer = 0f;
+            } else {
+                spawnTimer += 0.01f;
+            }
 
-        if(playerHealth == 4) {
-            playerHeart3.SetActive(false);
-        } else if(playerHealth == 2) {
-            playerHeart2.SetActive(false);
-        } else if(playerHealth == 0) {
-           playerHeart1.SetActive(false); 
+            if(playerHealth == 4) {
+                playerHeart3.SetActive(false);
+            } else if(playerHealth == 2) {
+                playerHeart2.SetActive(false);
+            } else if(playerHealth == 0) {
+               playerHeart1.SetActive(false); 
+            }
+            if(spiderheart3.activeSelf == false)
+            {
+                active = false;
+            }
         }
     }
 

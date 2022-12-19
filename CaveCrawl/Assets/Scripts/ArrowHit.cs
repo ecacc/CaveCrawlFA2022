@@ -8,12 +8,14 @@ public class ArrowHit : MonoBehaviour
     public GameObject spiderHeart1;
     public GameObject spiderHeart2;
     public GameObject spiderHeart3;
-
+    public GameObject inventory;
+    public GameObject CameraBossFight;
     void Start()
     {
         spiderHeart1.SetActive(true);
         spiderHeart2.SetActive(true);
         spiderHeart3.SetActive(true);
+        inventory.SetActive(false);
     }
 
     void FixedUpdate()
@@ -23,7 +25,10 @@ public class ArrowHit : MonoBehaviour
         } else if(spiderHealth == 1) {
             spiderHeart2.SetActive(false);
         } else if(spiderHealth == 0) {
-           spiderHeart1.SetActive(false); 
+           spiderHeart1.SetActive(false);
+            inventory.SetActive(true);
+            this.gameObject.SetActive(false);
+            CameraBossFight.GetComponent<CameraBossFight>().FightCam();
         }
     }
 

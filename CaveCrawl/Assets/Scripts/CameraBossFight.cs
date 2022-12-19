@@ -37,6 +37,6 @@ public class CameraBossFight : MonoBehaviour
 
     public void FightCam()
     {
-        follow_player = false; 
+        follow_player = !follow_player; 
     }
 }
