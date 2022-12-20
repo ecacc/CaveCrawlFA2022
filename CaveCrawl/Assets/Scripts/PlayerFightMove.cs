@@ -7,6 +7,7 @@ public class PlayerFightMove : MonoBehaviour
     public float runSpeed = 8f;
     private Vector3 hMove;
     public GameObject CameraBossFight;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,13 @@ public class PlayerFightMove : MonoBehaviour
     void Update()
     {
         hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            anim.SetBool("Walking", true);
+        }else
+        {
+            anim.SetBool("Walking", false);
+        }
         transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
     }
 

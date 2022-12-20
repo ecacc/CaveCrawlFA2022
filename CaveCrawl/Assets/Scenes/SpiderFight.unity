@@ -13551,6 +13551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 12
   CameraBossFight: {fileID: 2065696307}
+  anim: {fileID: 233133547}
 --- !u!50 &479472228
 Rigidbody2D:
   serializedVersion: 4
