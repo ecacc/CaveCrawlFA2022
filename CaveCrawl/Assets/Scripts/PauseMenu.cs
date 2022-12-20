@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour  {
         }
 
         void Start () {
+             GameisPaused = false;
              pauseMenuUI.SetActive(false);
              resumeUI.SetActive(false);
              

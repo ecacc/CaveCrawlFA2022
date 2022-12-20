@@ -29,6 +29,7 @@ public class Bow : MonoBehaviour
     {
         gauge_start = gauge.transform.position;
         SpawnArrow();
+        note.SetActive(false);
         
     }
 
