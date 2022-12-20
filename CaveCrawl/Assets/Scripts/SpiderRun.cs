@@ -57,7 +57,7 @@ public class SpiderRun : MonoBehaviour
             Collider2D col = GetComponent<Collider2D>();
             col.enabled = false;
             pos = transform.position.y + (0.1f * moveSpeed);
-            if (pos < 15)
+            if (pos < 10)
             {
                 transform.position = new Vector3(transform.position.x, pos, transform.position.z);
             }
