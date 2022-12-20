@@ -8,6 +8,14 @@ public class PlayerFightMove : MonoBehaviour
     private Vector3 hMove;
     public GameObject CameraBossFight;
     public Animator anim;
+
+    // Things for sound effects
+    public AudioSource WalkSFX;
+    public AudioSource JumpSFX;
+    public AudioSource lavaSFX;
+    public GameObject pauseMenu;
+    public GameObject note;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +28,25 @@ public class PlayerFightMove : MonoBehaviour
         hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
         if (Input.GetAxis("Horizontal") != 0)
         {
+            if(FightLava.startBlinking) {
+                if (!lavaSFX.isPlaying) {
+                    lavaSFX.Play();
+                }
+            }
+            if (!WalkSFX.isPlaying && !JumpSFX.isPlaying && !pauseMenu.activeSelf && !note.activeSelf){
+                WalkSFX.Play();
+            } else if(JumpSFX.isPlaying || pauseMenu.activeSelf || note.activeSelf) {
+                WalkSFX.Stop();
+            }
             anim.SetBool("Walking", true);
         }else
         {
+            WalkSFX.Stop();
+            if(FightLava.startBlinking) {
+                if(!lavaSFX.isPlaying) {
+                    lavaSFX.Play();
+                }
+            }
             anim.SetBool("Walking", false);
         }
         transform.position = transform.position + hMove * runSpeed * Time.deltaTime;

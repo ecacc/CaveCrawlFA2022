@@ -13,7 +13,7 @@ public class BossFightJump : MonoBehaviour {
       public bool canJump = false;
       public int jumpTimes = 0;
       public bool isAlive = true;
-      //public AudioSource JumpSFX;
+      public AudioSource JumpSFX;
 
       void Start(){
             //anim = gameObject.GetComponentInChildren<Animator>();
@@ -36,7 +36,7 @@ public class BossFightJump : MonoBehaviour {
             jumpTimes += 1;
             rb.velocity = Vector2.up * jumpForce;
             //anim.SetTrigger("jump");
-            // JumpSFX.Play();
+            JumpSFX.Play();
 
             //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
             //rb.velocity = movement;

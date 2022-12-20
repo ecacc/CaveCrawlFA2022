@@ -25,7 +25,7 @@ public class FightLava : MonoBehaviour
         if (startBlinking == true)
         {
             SpriteBlinkingEffect();
-            PlayerHealth.health -= .005f;
+            //PlayerHealth.health -= .005f;
         }
 
     }
