@@ -70526,7 +70526,7 @@ MonoBehaviour:
     m_LineSpacing: 1.45
   m_Text: I lost my trusty grappling hook that allowed me to travel over the dangerous
     lava with just a click of a finger. I don't know if I'll be able to make it without
-    it.
+    it. (Click and hold left mouse to grapple)
 --- !u!222 &2089747926
 CanvasRenderer:
   m_ObjectHideFlags: 0
