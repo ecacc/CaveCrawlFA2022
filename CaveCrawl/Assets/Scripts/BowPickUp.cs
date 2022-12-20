@@ -16,9 +16,9 @@ public class BowPickUp : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
       if (bMessage) {
-            timer += .001;
+            timer += .005;
         if(timer > 1) {
           BowMessage.SetActive(false);
           bMessage = false;
