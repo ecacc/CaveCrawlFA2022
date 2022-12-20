@@ -14,9 +14,12 @@ public class PlayerMove : MonoBehaviour {
       //public AudioSource WalkSFX;
       private Vector3 hMove;
 
+      public static bool inLava = false;
+
       void Start(){
            anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
+           inLava = false;
       }
 
       void Update(){
@@ -25,12 +28,23 @@ public class PlayerMove : MonoBehaviour {
            if (isAlive == true){
                   transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
                   if (Input.GetAxis("Horizontal") != 0){
-                         anim.SetBool ("run", true);
+                        anim.SetBool("fireidle", false);
+                        if(inLava || PlayerLava.startBlinking) {
+                              anim.SetBool("firerun", true);
+                        } else {
+                              anim.SetBool("firerun", false);
+                              anim.SetBool ("run", true);
+                        }
+                         
                   //       if (!WalkSFX.isPlaying){
                   //             WalkSFX.Play();
                   //      }
                   } else {
+                          anim.SetBool("firerun", false);
                           anim.SetBool ("run", false);
+                          if(inLava || PlayerLava.startBlinking) {
+                              anim.SetBool("fireidle", true);
+                          }
                   //      WalkSFX.Stop();
                   }
 
@@ -57,5 +71,17 @@ public class PlayerMove : MonoBehaviour {
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+      }
+
+      public void OnCollisionEnter2D(Collision2D other) {
+            if(other.gameObject.tag == "Lava") {
+                  inLava = true;
+            }
+      }
+
+      public void OnCollisionExit2D(Collision2D other) {
+           if(other.gameObject.tag == "Lava") {
+                  inLava = false;
+            } 
       }
 }

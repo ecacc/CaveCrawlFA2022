@@ -35,7 +35,12 @@ public class PlayerJump : MonoBehaviour {
       public void Jump() {
             jumpTimes += 1;
             rb.velocity = Vector2.up * jumpForce;
-            anim.SetTrigger("jump");
+            if(PlayerMove.inLava || PlayerLava.startBlinking) {
+                  anim.SetTrigger("firejump");
+                  //replace with the fire jump
+            } else {
+                  anim.SetTrigger("jump");
+            }
             // JumpSFX.Play();
 
             //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);

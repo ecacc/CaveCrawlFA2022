@@ -39,7 +39,7 @@ public class GetGrappling : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "GrapplingHook") {
             Destroy(other.gameObject);
-            player.GetComponent<SpringJoint2D>().enabled = true;
+            //player.GetComponent<SpringJoint2D>().enabled = true;
             GunPivot.SetActive(true);
             gMessage = true;
             GrapplingMessage.SetActive(true);
