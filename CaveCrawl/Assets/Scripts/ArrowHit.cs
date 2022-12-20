@@ -10,6 +10,7 @@ public class ArrowHit : MonoBehaviour
     public GameObject spiderHeart3;
     public GameObject inventory;
     public GameObject CameraBossFight;
+    public Animator anim;
     void Start()
     {
         spiderHeart1.SetActive(true);
@@ -27,8 +28,7 @@ public class ArrowHit : MonoBehaviour
         } else if(spiderHealth == 0) {
            spiderHeart1.SetActive(false);
             inventory.SetActive(true);
-            this.gameObject.SetActive(false);
-            CameraBossFight.GetComponent<CameraBossFight>().FightCam();
+            anim.SetTrigger("Dead");
         }
     }
 

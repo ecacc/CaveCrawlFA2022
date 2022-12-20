@@ -24,6 +24,7 @@ public class PlayerFightMove : MonoBehaviour
     {
         if (other.gameObject.tag == "BossFightTrigger")
         {
+            other.gameObject.SetActive(false);
             CameraBossFight.GetComponent<CameraBossFight>().FightCam();
         }
     }

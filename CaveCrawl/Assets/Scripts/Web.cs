@@ -14,7 +14,7 @@ public class Web : MonoBehaviour
     public GameObject playerHeart1;
     public GameObject playerHeart2;
     public GameObject playerHeart3;
-    public GameObject spiderheart3;
+    public GameObject spiderheart1;
 
     //Timing variables
     public float timeToSpawn;
@@ -49,7 +49,7 @@ public class Web : MonoBehaviour
             } else if(playerHealth == 0) {
                playerHeart1.SetActive(false); 
             }
-            if(spiderheart3.activeSelf == false)
+            if(spiderheart1.activeSelf == false)
             {
                 active = false;
             }
@@ -68,7 +68,6 @@ public class Web : MonoBehaviour
         }
         Vector3 y = new Vector3(0, randy * 0.5f * launchForce, 0);
         newWeb.GetComponent<Rigidbody2D>().velocity = x + y;
-        Debug.Log(randy);
     }
 
 

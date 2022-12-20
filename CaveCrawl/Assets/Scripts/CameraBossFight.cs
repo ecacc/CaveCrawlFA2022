@@ -8,11 +8,13 @@ public class CameraBossFight : MonoBehaviour
     public float camSpeed = 4.0f;
     private bool follow_player;
     private Camera fightCam;
+    private float start_cam_size;
 
     void Start()
     {
         follow_player = true;
         fightCam = GetComponent<Camera>();
+        start_cam_size = fightCam.orthographicSize;
     }
 
     void FixedUpdate()
@@ -21,6 +23,11 @@ public class CameraBossFight : MonoBehaviour
         {
             Vector2 pos = Vector2.Lerp((Vector2)transform.position, (Vector2)player.transform.position, camSpeed * Time.fixedDeltaTime);
             transform.position = new Vector3(pos.x, pos.y, transform.position.z);
+            fightCam.orthographicSize = fightCam.orthographicSize - 2 * Time.deltaTime;
+            if (fightCam.orthographicSize < start_cam_size)
+            {
+                fightCam.orthographicSize = start_cam_size; // Max size
+            }
         }
         else
         {
@@ -37,6 +44,8 @@ public class CameraBossFight : MonoBehaviour
 
     public void FightCam()
     {
+        Debug.Log("fight cam call");
         follow_player = !follow_player; 
+        
     }
 }
