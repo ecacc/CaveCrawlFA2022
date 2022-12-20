@@ -13,6 +13,7 @@ public class Video : MonoBehaviour
 
     void Start()
     {
+        Audio.beginning = false;
         videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, videoName);
     }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GetGrappling : MonoBehaviour
 {
+    public GameObject objects;
+
     public GameObject player;
     public GameObject GunPivot;
 
@@ -18,6 +20,7 @@ public class GetGrappling : MonoBehaviour
        player.GetComponent<SpringJoint2D>().enabled = false;
        GunPivot.SetActive(false);
        GrapplingMessage.SetActive(false);
+       objects.gameObject.GetComponent<AudioSource>().time = 0.1f;
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class GetGrappling : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "GrapplingHook") {
+            objects.gameObject.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             //player.GetComponent<SpringJoint2D>().enabled = true;
             GunPivot.SetActive(true);

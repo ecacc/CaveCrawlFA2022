@@ -13,7 +13,7 @@ public class PlayerJump : MonoBehaviour {
       public bool canJump = false;
       public int jumpTimes = 0;
       public bool isAlive = true;
-      //public AudioSource JumpSFX;
+      public AudioSource JumpSFX;
 
       void Start(){
             anim = gameObject.GetComponentInChildren<Animator>();
@@ -41,7 +41,7 @@ public class PlayerJump : MonoBehaviour {
             } else {
                   anim.SetTrigger("jump");
             }
-            // JumpSFX.Play();
+            JumpSFX.Play();
 
             //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
             //rb.velocity = movement;

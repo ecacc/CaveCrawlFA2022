@@ -11,8 +11,12 @@ public class PlayerMove : MonoBehaviour {
       public static float runSpeed = 8f;
       public float startSpeed = 4f;
       public static bool isAlive = true;
-      //public AudioSource WalkSFX;
+      public AudioSource WalkSFX;
+      public AudioSource JumpSFX;
+      public AudioSource lavaSFX;
       private Vector3 hMove;
+      public GameObject pauseMenu;
+      public GameObject note;
 
       public static bool inLava = false;
 
@@ -20,6 +24,7 @@ public class PlayerMove : MonoBehaviour {
            anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
            inLava = false;
+           WalkSFX.time = .7f;
       }
 
       void Update(){
@@ -30,22 +35,31 @@ public class PlayerMove : MonoBehaviour {
                   if (Input.GetAxis("Horizontal") != 0){
                         anim.SetBool("fireidle", false);
                         if(inLava || PlayerLava.startBlinking) {
+                              if (!lavaSFX.isPlaying) {
+                                    lavaSFX.Play();
+                              }
                               anim.SetBool("firerun", true);
                         } else {
                               anim.SetBool("firerun", false);
                               anim.SetBool ("run", true);
                         }
                          
-                  //       if (!WalkSFX.isPlaying){
-                  //             WalkSFX.Play();
-                  //      }
+                      if (!WalkSFX.isPlaying && !JumpSFX.isPlaying && !pauseMenu.activeSelf && !note.activeSelf){
+                         WalkSFX.Play();
+                      } else if(JumpSFX.isPlaying || pauseMenu.activeSelf || note.activeSelf) {
+                        WalkSFX.Stop();
+                      }
                   } else {
                           anim.SetBool("firerun", false);
                           anim.SetBool ("run", false);
                           if(inLava || PlayerLava.startBlinking) {
+                              if (!lavaSFX.isPlaying) {
+                                    lavaSFX.Play();
+                              }
                               anim.SetBool("fireidle", true);
                           }
-                  //      WalkSFX.Stop();
+                        WalkSFX.Stop();
+                        WalkSFX.time = .7f;
                   }
 
                   // Turning: Reverse if input is moving the Player right and Player faces left
