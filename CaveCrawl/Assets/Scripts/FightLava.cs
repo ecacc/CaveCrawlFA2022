@@ -32,7 +32,16 @@ public class FightLava : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Lava" || other.gameObject.tag == "web")
+        if (other.gameObject.tag == "Lava")
+        {
+            Debug.Log("Blinking?");
+            startBlinking = true;
+            GetComponent<Web>().decreaseHealth();
+            // if (light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity >= 0.01) {
+            //    light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity -= .1f;
+            // }
+        }
+        else if (other.gameObject.tag == "web")
         {
             Debug.Log("Blinking?");
             startBlinking = true;

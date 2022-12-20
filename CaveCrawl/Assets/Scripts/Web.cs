@@ -74,9 +74,13 @@ public class Web : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){ 
         if(other.gameObject.tag == "web") {
             Destroy(other.gameObject);
-            playerHealth -= 1;
+            decreaseHealth();
         }
     }
 
+    public void decreaseHealth()
+    {
+        playerHealth -= 1;
+    }
 
 }
