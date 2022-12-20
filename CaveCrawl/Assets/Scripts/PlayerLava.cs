@@ -11,12 +11,12 @@ public class PlayerLava : MonoBehaviour
     public float spriteBlinkingMiniDuration = 0.1f;
     public float spriteBlinkingTotalTimer = 0.0f;
     public float spriteBlinkingTotalDuration = 1.0f;
-    public bool startBlinking = false;
+    public static bool startBlinking = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        startBlinking = false;
     }
 
     // Update is called once per frame

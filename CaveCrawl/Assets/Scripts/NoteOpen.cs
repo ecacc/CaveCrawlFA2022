@@ -7,6 +7,8 @@ using UnityEngine.Audio;
 
 public class NoteOpen : MonoBehaviour
 {
+     public GameObject objects;
+
      public GameObject noteUI;
      public GameObject inventory;
      public GameObject hearts;
@@ -20,6 +22,7 @@ public class NoteOpen : MonoBehaviour
       noteUI.SetActive(false);
       inventory.SetActive(true);
       hearts.SetActive(true);
+      objects.gameObject.GetComponent<AudioSource>().time = 0.1f;
      }
 
      void Update() {
@@ -29,10 +32,11 @@ public class NoteOpen : MonoBehaviour
      }
 
      void OnCollisionEnter2D(Collision2D other) {
-          if (other.gameObject.tag == "note") {
-            Destroy(other.gameObject);
-            noteShow = true;
-          }
+       if (other.gameObject.tag == "note") {
+          objects.gameObject.GetComponent<AudioSource>().Play();
+          Destroy(other.gameObject);
+          noteShow = true;
+       }
      }
 
      void Pause() {

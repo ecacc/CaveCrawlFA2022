@@ -7,8 +7,12 @@ using UnityEngine.Audio;
 
 public class Mushroom : MonoBehaviour
 {
-    
+     public GameObject objects;
      public GameObject light;
+
+     void Start() {
+        objects.gameObject.GetComponent<AudioSource>().time = 0.1f;
+     }
 
      void Update() {
       if(!(NoteOpen.noteShow)) {
@@ -20,6 +24,7 @@ public class Mushroom : MonoBehaviour
 
      void OnCollisionEnter2D(Collision2D other) {
           if (other.gameObject.tag == "mushroom"){
+               objects.gameObject.GetComponent<AudioSource>().Play();
                Destroy(other.gameObject);
                light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
           }

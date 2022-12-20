@@ -13,7 +13,7 @@ public class PlayerJump : MonoBehaviour {
       public bool canJump = false;
       public int jumpTimes = 0;
       public bool isAlive = true;
-      //public AudioSource JumpSFX;
+      public AudioSource JumpSFX;
 
       void Start(){
             anim = gameObject.GetComponentInChildren<Animator>();
@@ -35,8 +35,13 @@ public class PlayerJump : MonoBehaviour {
       public void Jump() {
             jumpTimes += 1;
             rb.velocity = Vector2.up * jumpForce;
-            anim.SetTrigger("jump");
-            // JumpSFX.Play();
+            if(PlayerMove.inLava || PlayerLava.startBlinking) {
+                  anim.SetTrigger("firejump");
+                  //replace with the fire jump
+            } else {
+                  anim.SetTrigger("jump");
+            }
+            JumpSFX.Play();
 
             //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
             //rb.velocity = movement;

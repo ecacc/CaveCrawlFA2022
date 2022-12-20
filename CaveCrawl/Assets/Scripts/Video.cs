@@ -13,6 +13,7 @@ public class Video : MonoBehaviour
 
     void Start()
     {
+        Audio.beginning = false;
         videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, videoName);
     }
 
@@ -33,7 +34,7 @@ public class Video : MonoBehaviour
     }
 
     public void Skip() {
-        if(videoName == "CaveCrawlIntro.mp") {
+        if(videoName == "CaveCrawlIntro.mp4") {
             SceneManager.LoadSceneAsync("Level1");
         } else {
             SceneManager.LoadSceneAsync("StartPage");
