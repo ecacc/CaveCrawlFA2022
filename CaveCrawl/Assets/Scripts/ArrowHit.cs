@@ -12,9 +12,11 @@ public class ArrowHit : MonoBehaviour
     public GameObject CameraBossFight;
     public Animator anim;
     public AudioSource spiderSound;
+    public GameObject pauseMenu;
 
     void Start()
     {
+        spiderSound.Play();
         spiderHeart1.SetActive(true);
         spiderHeart2.SetActive(true);
         spiderHeart3.SetActive(true);
@@ -23,6 +25,11 @@ public class ArrowHit : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(pauseMenu.activeSelf) {
+            spiderSound.Stop();
+        } else if(!pauseMenu.activeSelf && !spiderSound.isPlaying && spiderHeart1.activeSelf) {
+            spiderSound.Play();
+        }
         if(spiderHealth == 2) {
             spiderHeart3.SetActive(false);
         } else if(spiderHealth == 1) {

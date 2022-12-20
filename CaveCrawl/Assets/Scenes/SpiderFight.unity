@@ -472,10 +472,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 42780b9b8a6a46548acb78c306e086ea, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4e4dd0cf9d07899408d0ca0bae5a5574, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2235,7 +2235,7 @@ RectTransform:
   - {fileID: 398203964}
   - {fileID: 584585544}
   m_Father: {fileID: 1772016328}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14288,7 +14288,7 @@ RectTransform:
   - {fileID: 946605976}
   - {fileID: 110735128}
   m_Father: {fileID: 1772016328}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14840,7 +14840,7 @@ RectTransform:
   m_Children:
   - {fileID: 1304609377}
   m_Father: {fileID: 1772016328}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20469,6 +20469,7 @@ MonoBehaviour:
   CameraBossFight: {fileID: 2065696307}
   anim: {fileID: 466503518}
   spiderSound: {fileID: 70079954}
+  pauseMenu: {fileID: 397494649}
 --- !u!114 &1611740179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21251,9 +21252,9 @@ RectTransform:
   - {fileID: 420365825}
   - {fileID: 2128056921}
   - {fileID: 253111225}
+  - {fileID: 569930919}
   - {fileID: 397494650}
   - {fileID: 634137533}
-  - {fileID: 569930919}
   - {fileID: 1108559377}
   - {fileID: 1713997716}
   m_Father: {fileID: 0}
