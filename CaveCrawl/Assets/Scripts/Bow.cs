@@ -22,6 +22,7 @@ public class Bow : MonoBehaviour
     private float spawnTimer = 0f;
     public static bool hit = false;
     private bool hasArrow;
+    public GameObject note;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,7 @@ public class Bow : MonoBehaviour
         //}
 
         if(hasArrow) {
-            if (Input.GetMouseButtonDown(0) && !PauseMenu.GameisPaused) {
+            if (Input.GetMouseButtonDown(0) && !PauseMenu.GameisPaused && !note.activeSelf) {
                 hasArrow = false;
                 ShotStrengthMeter.GetComponent<ShotStrength>().ShotStrengthPause();
                 SpawnArrow();

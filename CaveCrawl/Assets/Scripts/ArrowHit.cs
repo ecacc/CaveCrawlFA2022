@@ -11,6 +11,8 @@ public class ArrowHit : MonoBehaviour
     public GameObject inventory;
     public GameObject CameraBossFight;
     public Animator anim;
+    public AudioSource spiderSound;
+
     void Start()
     {
         spiderHeart1.SetActive(true);
@@ -28,6 +30,7 @@ public class ArrowHit : MonoBehaviour
         } else if(spiderHealth == 0) {
            spiderHeart1.SetActive(false);
             inventory.SetActive(true);
+            spiderSound.Stop();
             anim.SetTrigger("Dead");
         }
     }

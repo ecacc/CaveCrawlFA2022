@@ -6179,7 +6179,6 @@ MonoBehaviour:
   spriteBlinkingMiniDuration: 0.1
   spriteBlinkingTotalTimer: 0
   spriteBlinkingTotalDuration: 1
-  startBlinking: 0
 --- !u!61 &394772664
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37459,6 +37458,7 @@ MonoBehaviour:
   canJump: 0
   jumpTimes: 0
   isAlive: 1
+  JumpSFX: {fileID: 0}
 --- !u!114 &1635596397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37474,6 +37474,11 @@ MonoBehaviour:
   rb2D: {fileID: 1635596398}
   anim: {fileID: 394772660}
   startSpeed: 6
+  WalkSFX: {fileID: 0}
+  JumpSFX: {fileID: 0}
+  lavaSFX: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  note: {fileID: 0}
 --- !u!50 &1635596398
 Rigidbody2D:
   serializedVersion: 4
@@ -39417,7 +39422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   P_last_heart: {fileID: 424536031}
-  level: 8
+  level: 6
 --- !u!1 &1945815694
 GameObject:
   m_ObjectHideFlags: 0
